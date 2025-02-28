@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact name="OOP_chess:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/OOP_chess_jar</output-path>
+    <root id="root">
+      <element id="archive" name="OOP_chess.jar">
+        <element id="module-output" name="OOP_chess" />
+      </element>
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:win:17.0.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:17.0.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:17.0.2" />
+    </root>
+  </artifact>
+</component>

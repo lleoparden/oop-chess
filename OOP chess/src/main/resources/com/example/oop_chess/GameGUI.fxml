@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1095.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_chess.MenuController">
+   <children>
+      <ImageView fitHeight="1111.0" fitWidth="1962.0" layoutX="-28.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/Chess%20GUI%20Game%20BG.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="mainMenuButton" alignment="CENTER" layoutX="1628.0" layoutY="989.0" mnemonicParsing="false" onAction="#switchToMenuGUI" opacity="0.8" prefHeight="69.0" prefWidth="254.0" styleClass="gameButton2" stylesheets="@Style.CSS" text=" Main Menu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font></Button>
+      <Label fx:id="blackTimerLabel" alignment="CENTER" layoutX="1022.0" layoutY="106.0" prefHeight="69.0" prefWidth="191.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="whiteTimerLabel" alignment="CENTER" layoutX="1023.0" layoutY="920.0" prefHeight="69.0" prefWidth="191.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="whiteMovesLabel" alignment="TOP_LEFT" graphicTextGap="0.0" layoutX="1284.0" layoutY="77.0" prefHeight="872.0" prefWidth="280.0" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="blackMovesLabel" alignment="TOP_LEFT" graphicTextGap="0.0" layoutX="1605.0" layoutY="81.0" prefHeight="872.0" prefWidth="280.0" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+
+       <GridPane fx:id="chessBoard" alignment="TOP_RIGHT" layoutX="42.0" layoutY="77.0" prefHeight="933.0" prefWidth="934.0">
+           <columnConstraints>
+               <ColumnConstraints />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints />
+           </rowConstraints>
+       </GridPane>
+      <Button layoutX="1284.0" layoutY="979.0" mnemonicParsing="false" onAction="#undo" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="72.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/Undo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="blackPromotion" layoutX="985.0" layoutY="176.0" prefHeight="289.0" prefWidth="271.0" visible="false">
+         <children>
+            <GridPane layoutX="15.0" layoutY="61.0" prefHeight="217.0" prefWidth="241.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="blackQueenPromotion" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="95.0" prefWidth="100.0" style="-fx-background-color: #929292;" GridPane.halignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="90.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/black-queen.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="blackRookPromotion" alignment="CENTER" mnemonicParsing="false" prefHeight="95.0" prefWidth="100.0" style="-fx-background-color: #929292;" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="90.0" fitWidth="85.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/black-rook.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="blackBishopPromotion" mnemonicParsing="false" prefHeight="95.0" prefWidth="100.0" style="-fx-background-color: #929292;" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="90.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/black-bishop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="blackKnightPromotion" mnemonicParsing="false" prefHeight="95.0" prefWidth="100.0" style="-fx-background-color: #929292;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="90.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/black-knight.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </GridPane>
+            <Label layoutX="7.0" layoutY="18.0" text="Choose your piece:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="whitePromotion" layoutX="986.0" layoutY="610.0" prefHeight="289.0" prefWidth="271.0" visible="false">
+         <children>
+            <GridPane layoutX="15.0" layoutY="26.0" prefHeight="217.0" prefWidth="241.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="whiteQueenPromotion" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="95.0" prefWidth="100.0" style="-fx-background-color: #929292;" GridPane.halignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="90.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/white-queen.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="whiteRookPromotion" alignment="CENTER" mnemonicParsing="false" prefHeight="95.0" prefWidth="100.0" style="-fx-background-color: #929292;" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="90.0" fitWidth="85.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/white-rook.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="whiteBishopPromotion" mnemonicParsing="false" prefHeight="95.0" prefWidth="100.0" style="-fx-background-color: #929292;" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="90.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/white-bishop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="whiteKnightPromotion" mnemonicParsing="false" prefHeight="95.0" prefWidth="100.0" style="-fx-background-color: #929292;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="90.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/white-knight.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </GridPane>
+            <Label layoutX="7.0" layoutY="244.0" text="Choose your piece:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="resignButton" layoutX="1392.0" layoutY="980.0" mnemonicParsing="false" onAction="#openResignMenu" prefHeight="80.0" prefWidth="84.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="78.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/Resign.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="resignPane" layoutX="1388.0" layoutY="671.0" prefHeight="314.0" prefWidth="191.0" visible="false">
+         <children>
+            <Pane layoutX="-10.0" layoutY="-8.0" opacity="0.21" prefHeight="321.0" prefWidth="206.0" style="-fx-background-color: black;" />
+            <Button fx:id="whiteResign" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" onAction="#whiteResignation" prefHeight="116.0" prefWidth="181.0" styleClass="gameButton2" stylesheets="@Style.CSS" text=" White Resign">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="blackResign" layoutX="5.0" layoutY="139.0" mnemonicParsing="false" onAction="#blackResignation" prefHeight="105.0" prefWidth="181.0" styleClass="gameButton2" stylesheets="@Style.CSS" text=" Black Resign" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="resignCancelButton" alignment="CENTER" contentDisplay="CENTER" layoutX="59.0" layoutY="262.0" mnemonicParsing="false" onAction="#closeResignMenu" prefHeight="37.0" prefWidth="76.0" styleClass="gameButton2" stylesheets="@Style.CSS" text=" Cancel" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="infinityLabel2" fitHeight="116.0" fitWidth="101.0" layoutX="1069.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@assets/Infinity.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="infinityLabel" fitHeight="116.0" fitWidth="101.0" layoutX="1070.0" layoutY="905.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@assets/Infinity.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="gameEnd" layoutX="-14.0" layoutY="-12.0" prefHeight="1116.0" prefWidth="1942.0" visible="false">
+         <children>
+            <Pane opacity="0.72" prefHeight="1118.0" prefWidth="1962.0" style="-fx-background-color: black;" />
+            <Pane layoutX="548.0" layoutY="289.0" prefHeight="500.0" prefWidth="850.0" style="-fx-background-color: #303030;">
+               <children>
+                  <Label fx:id="whiteVictoryLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="162.0" layoutY="43.0" text="White Wins" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="96.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="blackVictoryLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="43.0" text="Black Wins" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="96.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="resignationLabel" layoutX="344.0" layoutY="177.0" text="By resignation" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="gameEndMainMenu" alignment="CENTER" layoutX="459.0" layoutY="276.0" mnemonicParsing="false" onAction="#switchToMenuGUI" opacity="0.8" prefHeight="137.0" prefWidth="340.0" styleClass="gameButton2" stylesheets="@Style.CSS" text=" Main Menu" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="49.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gameEndQuit" alignment="CENTER" layoutX="67.0" layoutY="277.0" mnemonicParsing="false" onAction="#Quit" opacity="0.8" prefHeight="137.0" prefWidth="340.0" styleClass="gameButton2" stylesheets="@Style.CSS" text=" Quit Game" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="49.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="timeoutLabel" layoutX="366.0" layoutY="175.0" text="By timeout" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkmateLabel" layoutX="349.0" layoutY="175.0" text="By checkmate" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="drawLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="310.0" layoutY="43.0" text="Draw" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="96.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stalemateLabel" layoutX="356.0" layoutY="161.0" text="By Stalemate" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

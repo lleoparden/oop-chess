@@ -1,0 +1,39 @@
+package com.example.oop_chess;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+public class HelloController {
+    String Page = "Play";
+
+
+    @FXML
+    Button Playbutton;
+
+    @FXML
+    void Play() {
+        // Clear existing stylesheets
+        Playbutton.getStylesheets().clear();
+        Settingsbutton.getStylesheets().clear();
+
+        Playbutton.getStylesheets().add("com/example/oop_chess/PlayActive.css");
+        Settingsbutton.getStylesheets().add("com/example/oop_chess/PlayActive.css");
+        Page = "Play";
+    }
+
+    @FXML
+    Button Settingsbutton;
+
+    @FXML
+    void Settings() {
+        // Clear existing stylesheets
+        Playbutton.getStylesheets().clear();
+        Settingsbutton.getStylesheets().clear();
+        
+        Settingsbutton.getStylesheets().add("com/example/oop_chess/SettingActive.css");
+        Playbutton.getStylesheets().add("com/example/oop_chess/SettingActive.css");
+        Page = "Settings";
+    }
+
+}

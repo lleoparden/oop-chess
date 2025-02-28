@@ -1,0 +1,35 @@
+#Playbutton {
+    -fx-text-fill: white; /* text color */
+    -fx-background-color: #1c1c1c; /* background color should be #1c1c1c */
+    -fx-cursor: hand; /* cursor style */
+    -fx-border-color: black; /* border color */
+    -fx-border-width: 0px; /* border width */
+    -fx-border-radius: 4px; /* border radius */
+    -fx-background-radius: 4px; /* background radius */
+    -fx-padding: -15 110 0 0; /* padding */
+    -fx-effect: null; /* reset effect for hover */
+    -fx-transition: all 0.2s; /* transition time */
+    -fx-translate-x: -1px;
+}
+
+#Playbutton:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #101010; /* background color on hover */
+    /*-fx-translate-x: -4px; /* translate effect on x-axis
+    -fx-translate-y: -4px; /* translate effect on y-axis
+    -fx-effect: dropshadow(gaussian, black, 4, 0, 4, 4);  shadow effect */
+}
+
+#Settingsbutton {
+    -fx-text-fill: white; /* text color on hover */
+    -fx-background-color: #101010; /* background color on hover */
+    -fx-cursor: hand; /* cursor style */
+        -fx-border-color: black; /* border color */
+        -fx-border-width: 0px; /* border width */
+        -fx-border-radius: 4px; /* border radius */
+        -fx-background-radius: 4px; /* background radius */
+        -fx-padding: 0 17 0 0; /* padding */
+        -fx-effect: null; /* reset effect for hover */
+        -fx-transition: all 0.2s; /* transition time */
+        -fx-translate-x: -1px;
+}
